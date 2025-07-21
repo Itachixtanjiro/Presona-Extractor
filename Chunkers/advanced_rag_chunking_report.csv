@@ -1,0 +1,2 @@
+File,Total Words,Total Sentences,RAG Chunks,RAG Time (s),Longformer Chunks,Longformer Time (s),Reformer Chunks,Reformer Time (s),Routing Chunks,Routing Time (s),Distilled Chunks,Distilled Time (s),Quantized Chunks,Quantized Time (s)
+Unstructured_Report.docx,102080,5568,103,0.0121,205,0.0106,103,0.0112,103,0.0198,103,0.0182,103,0.0137

@@ -1,0 +1,2 @@
+File,Total Words,Total Sentences,Word Chunks,Word Chunk Time (s),Sentence Chunks,Sentence Chunk Time (s),Sliding Window Chunks,Sliding Time (s),RNN Chunks,RNN Time (s),RAG Chunks,RAG Time (s)
+Unstructured_Report.docx,102080,5568,103,0.015,186,0.012,205,0.0153,104,0.0206,103,0.0145

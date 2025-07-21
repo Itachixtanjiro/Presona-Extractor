@@ -1,0 +1,2 @@
+File,Chunks,RAG+Longformer Score,RAG+Longformer Time (s),RAG+Reformer Score,RAG+Reformer Time (s),RAG+Quantized Score,RAG+Quantized Time (s)
+Unstructured_Report.docx,105,0.85,0.1044,0.83,0.107,0.8,0.0637

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-wheel-metadata/
+.installed.cfg
+*.egg-info/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Uploads & Data
+uploads/
+vector_store/
+rules_problem_statement/
+TEST/
+
+# Models & Checkpoints (These are typically too large for Git)
+models/
+checkpoints/
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
