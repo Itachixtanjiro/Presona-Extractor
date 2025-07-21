@@ -79,16 +79,24 @@ Example:
 
 def run_evaluation():
     """Main function to run the evaluation process."""
+    print("--- Starting Model Evaluation ---")
     log.info("--- Starting Model Evaluation ---")
+    
     corpus = load_corpus(CORPUS_DIR)
     if not corpus:
-        log.error("Corpus is empty. Aborting evaluation."); return
+        error_msg = "Corpus is empty. Please ensure the 'rules_problem_statement' directory contains .docx or .pdf files. Aborting evaluation."
+        log.error(error_msg)
+        print(f"ERROR: {error_msg}")
+        return
 
     log.info(f"Loading base model: {BASE_MODEL_PATH}")
     base_model = SentenceTransformer(BASE_MODEL_PATH)
     
     if not os.path.exists(FINE_TUNED_MODEL_PATH):
-        log.error(f"Fine-tuned model not found at: {FINE_TUNED_MODEL_PATH}. Run 'python fine_tune_model.py' first."); return
+        error_msg = f"Fine-tuned model not found at: {FINE_TUNED_MODEL_PATH}. Run 'python fine_tune_model.py' first. Aborting evaluation."
+        log.error(error_msg)
+        print(f"ERROR: {error_msg}")
+        return
     log.info(f"Loading fine-tuned model: {FINE_TUNED_MODEL_PATH}")
     tuned_model = SentenceTransformer(FINE_TUNED_MODEL_PATH)
 
