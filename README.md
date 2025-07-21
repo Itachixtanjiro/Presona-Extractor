@@ -13,6 +13,12 @@ The system is built with a modular architecture and features an advanced, fine-t
 - **Prompt Engineering:** Utilizes fine-tuned prompts with few-shot examples to guide the LLM towards extracting specific, professional job titles as personas.
 - **Performance Benchmarking:** Includes scripts to evaluate and compare different model and chunking strategies.
 
+## System Architecture
+
+The following diagram illustrates the end-to-end workflow of the application, from document upload to structured data extraction.
+
+![System Logic Flow](logic_flow.png)
+
 ## Setup and Installation
 
 1.  **Clone the repository:**
@@ -51,20 +57,33 @@ uvicorn main:app --reload
 
 The API will be available at `http://127.0.0.1:8000/docs` where you can access the Swagger UI for interactive testing.
 
-## Performance Analysis & Optimization
+## Benchmarking & Evaluation
 
-This project underwent significant optimization to improve both the accuracy and speed of the extraction pipeline. The following graphs, generated from benchmark tests, illustrate the performance comparison between different RAG model configurations.
+This project includes comprehensive scripts for evaluating the performance of the embedding models and the overall RAG pipeline.
 
-### Model Performance Score Comparison
+### Embedding Model Evaluation
+
+The `evaluate_model.py` script compares the performance of the base `all-mpnet-base-v2` model against our fine-tuned version. Fine-tuning significantly improves the model's ability to understand the semantic nuances of the domain-specific documents.
+
+After running the script (`python evaluate_model.py`), the results will be displayed in the console. You can add them here:
+
+| Model | Cosine Similarity Score |
+| :--- | :--- |
+| **Base Model** | `[Enter Score Here]` |
+| **Fine-Tuned Model** | `[Enter Score Here]` |
+
+### RAG Pipeline Performance
+
+The following graphs, generated from benchmark tests, illustrate the performance comparison between different RAG model configurations.
+
+#### Model Performance Score Comparison
 
 This chart shows the accuracy score for each model configuration. Higher scores indicate better performance in extracting relevant and accurate information.
 
 ![Performance Score Comparison](visualizations/score_comparison.png)
 
-### Model Processing Time Comparison
+#### Model Processing Time Comparison
 
 This chart compares the processing time (in seconds) required by each model to analyze a sample document. Lower times indicate better efficiency.
 
 ![Processing Time Comparison](visualizations/time_comparison.png)
-
-As shown, the final implementation balances high performance with efficient processing, delivering accurate results quickly.
